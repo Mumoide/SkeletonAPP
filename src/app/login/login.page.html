@@ -1,29 +1,28 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-card class="ion-text-center">
+      <ion-card-header>
+        <ion-card-title>SkeletonAPP</ion-card-title>
+        <ion-card-content>Aqui comienza todo</ion-card-content>
+        <ion-card-subtitle>Bienvenido!</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<ion-card class="ion-text-center">
-  <ion-card-header>
-    <ion-card-subtitle></ion-card-subtitle>
-    <ion-card-title>SkeletonAPP</ion-card-title>
-  </ion-card-header>
-
-  <ion-card-content>
-    Aqui comienza todo
-  </ion-card-content>
-</ion-card>
-
-<ion-item>
-  <ion-label position="stacked">Usuario</ion-label>
-  <ion-input ></ion-input>
-</ion-item>
-<ion-item>
-  <ion-label position="stacked">Contrasenha</ion-label>
-  <ion-input type="password"></ion-input>
-</ion-item>
-<ion-button color="light" expand="full">Ingresar</ion-button>
-<p>Crea tu cuenta gratis</p>
+  <ion-item>
+    <ion-label position="stacked">Usuario</ion-label>
+    <ion-input type="text" minlength="3" maxlength="8"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Contrasenha</ion-label>
+    <ion-input type="password" maxlength="4"></ion-input>
+  </ion-item>
+  <ion-button color="light" expand="full" [routerLink]="'/home'"
+    >Ingresar</ion-button
+  >
+  <ion-card class="ion-text-center"
+    ><a [routerLink]="'/'">Crea tu cuenta gratis</a></ion-card
+  >
 </ion-content>
