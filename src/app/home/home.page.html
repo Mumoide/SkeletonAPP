@@ -1,23 +1,39 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      SkeletonApp
-    </ion-title>
+    <ion-card >
+      <ion-card-header>
+        <ion-card-title class="ion-text-center">Bienvenido</ion-card-title>
+        <ion-text class="ion-text-left">Usuario: {{userHome}}</ion-text>
+        <ion-card-subtitle class="ion-text-center">Informacion adicional</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
   </ion-toolbar>
 </ion-header>
+<ion-content>
+  <ion-item>
+  <ion-label>Nombre</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Apellido</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Fecha de nacimiento</ion-label>
+  <ion-input type="date"></ion-input>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+</ion-item>
+<ion-item>
+  <ion-button color="light" expand="block" size="large">Limpiar</ion-button
+  >
+  <ion-button color="light" expand="block" size="large">Mostrar</ion-button>
+</ion-item>
 <ion-button color="light" expand="full" [routerLink]="'/login'"
     >Volver</ion-button
   >
+  </ion-content>
+<ion-footer class="ion-text-center" collapse="fade">
+  <ion-toolbar>
+    <ion-title  size="small"><ion-icon name="logo-linkedin"></ion-icon> <ion-icon name="logo-instagram"></ion-icon>{{value}}</ion-title>
+  </ion-toolbar>
+</ion-footer>

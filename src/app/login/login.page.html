@@ -11,18 +11,35 @@
 </ion-header>
 
 <ion-content>
+<form [formGroup]="usuario">
   <ion-item>
     <ion-label position="stacked">Usuario</ion-label>
-    <ion-input type="text" minlength="3" maxlength="8"></ion-input>
+    <ion-input type="text" minlength="3" maxlength="8" formControlName="user"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="stacked">Contrasenha</ion-label>
-    <ion-input type="password" maxlength="4"></ion-input>
+    <ion-input type="password" maxlength="4" formControlName="pass"></ion-input>
   </ion-item>
   <ion-button color="light" expand="full" [routerLink]="'/home'"
     >Ingresar</ion-button
   >
+    <div>
+      <ion-button
+        expand="full"
+        type="submit"
+        [disabled]="!usuario.valid"
+        (click)="goToPagina2()"
+        routerDirection="forward"
+        >Programacion</ion-button
+      >
+    </div>
   <ion-card class="ion-text-center"
     ><a [routerLink]="'/'">Crea tu cuenta gratis</a></ion-card
   >
+</form>
 </ion-content>
+<ion-footer class="ion-text-center" collapse="fade">
+  <ion-toolbar>
+    <ion-title  size="small"><ion-icon name="logo-linkedin"></ion-icon> <ion-icon name="logo-instagram"></ion-icon>{{value}}</ion-title>
+  </ion-toolbar>
+</ion-footer>
